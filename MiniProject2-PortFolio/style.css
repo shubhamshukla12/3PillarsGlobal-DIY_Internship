@@ -96,7 +96,8 @@ container:hover{
 }
 
 .one-div{
-  width: 360px; 
+  width: 500px;
+  font-size: 30px; 
 }
 
 .container1 {
@@ -104,9 +105,9 @@ container:hover{
   height: 220px;
 }
 .container1>div {
-  font-size: 25px;
+  font-size: 30px;
   text-transform: uppercase;
-  color: #1faeca;
+  color: #f00d05;
   opacity: 0;
   height: 0px;
   }
