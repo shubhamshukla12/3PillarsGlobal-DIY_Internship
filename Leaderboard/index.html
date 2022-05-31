@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeaderBoard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <script>function addRow() {
+         
+        var myName = document.getElementById("name");
+        var age = document.getElementById("age");
+        var myCountry = document.getElementById("country");
+        var myScore = document.getElementById("score");
+        var table = document.getElementById("myTableData");
+    
+        var rowCount = table.rows.length;
+        var row = table.insertRow(rowCount);
+        
+        row.insertCell(0).innerHTML= myName.value;
+        row.insertCell(1).innerHTML= age.value;
+        row.insertCell(2).innerHTML=myCountry.value;
+        row.insertCell(3).innerHTML=myScore.value;
+        row.insertCell(4).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
+    
+    }
+    
+    function deleteRow(obj) {
+         
+        var index = obj.parentNode.parentNode.rowIndex;
+        var table = document.getElementById("myTableData");
+        table.deleteRow(index);
+       
+    }
+    </script>
+    <div id="myDIV" class="header">
+        <h1>3 Pillar Global's Mini Project - Leader Board under DIY Program</h1>
+        <!-- <form >
+            <input type="text" id="fname" name="firstname" placeholder="first name">
+            <input type="text" id="lname" name="lastname" placeholder="last name">
+            <input type="text" id="country" name="country" placeholder="Country">
+            <input type="text" id="score" name="score" placeholder="Player's Score..">
+          
+            <input type="submit" value="ADD" style="background: rgb(206, 122, 122);">
+            
+        </form> -->
+        <table>
+            <tr>
+                <td><input type="text" id="name" placeholder="name"></td>
+                <td><input type="text" id="age" placeholder="age"></td>
+                <td><input type="text" id="country" placeholder="country"></td>
+                <td><input type="text" id="score" placeholder="score"></td>
+                <td><input type="submit" id="add" value="Add" onclick="Javascript:addRow()"></td>
+            </tr>
+        
+        </table>
+        </div>
+        <div>
+        <table id="myTableData"  border="1" cellpadding="2">
+            <tr>
+               
+                <td><b>Name</b></td>
+                <td><b>Age</b></td>
+                <td><b>country</b></td>
+                <td><b>score</b></td>
+                <td><b>Delete</b></td>
+            </tr>
+        </table>
+        </div>
+
+</body>
+</html>

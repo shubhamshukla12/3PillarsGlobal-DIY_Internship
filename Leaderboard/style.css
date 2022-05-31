@@ -1,0 +1,28 @@
+
+* {
+    box-sizing: border-box;
+  }
+   input[type=text], input[type=submit], b{
+    /* width: 18%; */
+    padding: 12px 20px;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-right: 15px;
+  }
+
+  
+  .header {
+    background-color: #f5e837;
+    padding: 30px 40px;
+    color: white;
+    text-align: center;
+  }
+  
+  .header:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
