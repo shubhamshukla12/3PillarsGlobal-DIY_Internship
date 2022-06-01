@@ -6,27 +6,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>LeaderBoard</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <script>function addRow() {
          
-        var myName = document.getElementById("name");
-        var age = document.getElementById("age");
+        var myfName = document.getElementById("fname");
+        var mylname = document.getElementById("lname");
         var myCountry = document.getElementById("country");
         var myScore = document.getElementById("score");
         var table = document.getElementById("myTableData");
+
     
         var rowCount = table.rows.length;
         var row = table.insertRow(rowCount);
         
-        row.insertCell(0).innerHTML= myName.value;
-        row.insertCell(1).innerHTML= age.value;
+        row.insertCell(0).innerHTML= myfName.value;
+        row.insertCell(1).innerHTML= mylname.value;
         row.insertCell(2).innerHTML=myCountry.value;
         row.insertCell(3).innerHTML=myScore.value;
-        row.insertCell(4).innerHTML= '<input type="button" value = "Delete" onClick="Javacsript:deleteRow(this)">';
-    
+        row.insertCell(4).innerHTML= '<i class="fa fa-trash" onClick="Javacsript:deleteRow(this)" ></i>';
+        row.insertCell(5).innerHTML= '<i class="fa fa-arrows" aria-hidden="true" onClick="Javacsript:plusFive(this)">5</i>';
+        row.insertCell(6).innerHTML= '<i class="fa fa-arrows-h" aria-hidden="true" onClick="Javacsript:minusFive(this)">5</i>';
+        
     }
-    
+    function plusFive() {
+        let num1 = Number(document.querySelector("#score").value);
+        let newScore = num1 + 5;
+        document.getElementById("score").value = newScore;
+    }
+    function minusFive() {
+        let num1 = Number(document.querySelector("#score").value);
+        let newScore = num1 - 5;
+        document.getElementById("score").value = newScore;
+    }
     function deleteRow(obj) {
          
         var index = obj.parentNode.parentNode.rowIndex;
@@ -48,25 +61,26 @@
         </form> -->
         <table>
             <tr>
-                <td><input type="text" id="name" placeholder="name"></td>
-                <td><input type="text" id="age" placeholder="age"></td>
-                <td><input type="text" id="country" placeholder="country"></td>
-                <td><input type="text" id="score" placeholder="score"></td>
-                <td><input type="submit" id="add" value="Add" onclick="Javascript:addRow()"></td>
+                <input type="text" id="fname" placeholder="first name" value="">
+                <input type="text" id="lname" placeholder="last name">
+                <input type="text" id="country" placeholder="country">
+                <input type="text" id="score" placeholder="score">
+                <input type="submit" id="add" value="Add" onclick="Javascript:addRow()">
             </tr>
         
         </table>
         </div>
         <div>
-        <table id="myTableData"  border="1" cellpadding="2">
+        <table id="myTableData" cellpadding="1" class="myTableData">
+           <tbody>
             <tr>
-               
-                <td><b>Name</b></td>
+                <!-- <td><b>Name</b></td>
                 <td><b>Age</b></td>
                 <td><b>country</b></td>
                 <td><b>score</b></td>
-                <td><b>Delete</b></td>
+                <td><b>Delete</b></td> -->
             </tr>
+           </tbody>
         </table>
         </div>
 

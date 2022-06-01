@@ -14,7 +14,7 @@
 
   
   .header {
-    background-color: #f5e837;
+    background-image: linear-gradient(to bottom right, #82c138, #c6100d);
     padding: 30px 40px;
     color: white;
     text-align: center;
@@ -26,3 +26,19 @@
     clear: both;
   }
   
+ tr, td {
+    width: 25%;
+    border-spacing:0; /* Removes the cell spacing via CSS */ 
+    border-collapse: collapse;
+	  border: 1px solid black;
+	  text-align: center;
+	  vertical-align: middle;
+  }
+
+  .myTableData{
+    text-align: centre;
+    border-radius: 8px;
+    width: 100%;
+    background-color: bisque;
+
+  }
