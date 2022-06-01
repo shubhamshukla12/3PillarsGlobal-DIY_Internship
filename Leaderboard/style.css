@@ -2,8 +2,7 @@
 * {
     box-sizing: border-box;
   }
-   input[type=text], input[type=submit], b{
-    /* width: 18%; */
+   input[type=text], input[type=submit]{
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
@@ -25,20 +24,24 @@
     display: table;
     clear: both;
   }
-  
- tr, td {
-    width: 25%;
-    border-spacing:0; /* Removes the cell spacing via CSS */ 
+
+  #myTableData {
+    font-family: Arial, Helvetica, sans-serif;
     border-collapse: collapse;
-	  border: 1px solid black;
+    width: 100%;
+  }
+  #myTableData button{
+    color:black;
+    border-radius: 45px;
+  }
+  #myTableData td{
+    padding: 8px;
+    width: 25%;
 	  text-align: center;
 	  vertical-align: middle;
   }
-
-  .myTableData{
-    text-align: centre;
-    border-radius: 8px;
-    width: 100%;
-    background-color: bisque;
-
-  }
+  
+  #myTableData tr:nth-child(even){background-color: bisque;}
+  #myTableData tr:nth-child(odd){background-color: rgb(221, 207, 190);}
+  
+  #myTableData tr:hover {background-color: rgb(214, 237, 247);}

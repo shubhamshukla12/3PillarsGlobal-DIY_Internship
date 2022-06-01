@@ -16,8 +16,43 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
+ 
   </head>
   <body>
+
+    <div id="myDIV" class="header">
+      <h1>3 Pillar Global's Mini Project - Leader Board Under DIY Program</h1>
+
+      <table id="myTable">
+        <tr>
+          <input type="text" id="fname" placeholder="first name" value="" />
+          <input type="text" id="lname" placeholder="last name" />
+          <input type="text" id="country" placeholder="country" />
+          <input type="text" id="score" placeholder="score" />
+          <input
+            type="submit"
+            id="add"
+            value="Add Player"
+            onclick="Javascript:addRow()"
+            style="background-color: #af8fe4;"
+          />
+        </tr>
+      </table>
+    </div>
+    <center>
+      <div id="warn" class="text-danger" style="display: none">
+        **All fields are Mandatory**
+      </div>
+    </center>
+    <div>
+      <table id="myTableData" cellpadding="1">
+        <tbody>
+          <tr>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     <script>
       function addRow() {
         var myfName = document.getElementById("fname");
@@ -50,15 +85,20 @@
         row.insertCell(5).innerHTML =
           "<button onClick='Javacsript:substractScore(this)' class='badge badge-info'>-5</button>";
         row.insertCell(5).innerHTML =
-          "<button onClick='Javacsript:increseScore(this)' class='badge badge-info;''>+5</button>";
+          "<button onClick='Javacsript:increaseScore(this)' class='badge badge-info;''>+5</button>";
         sortTable();
+
+        document.getElementById("fname").value="";
+        document.getElementById("lname").value="";
+        document.getElementById("country").value="";
+        document.getElementById("score").value="";
       }
       function substractScore(obj) {
         var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[3];
         scoreTd.innerHTML = Number(scoreTd.innerHTML) - 5;
         sortTable();
       }
-      function increseScore(obj) {
+      function increaseScore(obj) {
         var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[3];
         scoreTd.innerHTML = Number(scoreTd.innerHTML) + 5;
         sortTable();
@@ -70,10 +110,10 @@
         table.deleteRow(index);
       }
       function sortTable() {
-        console.log("sorting");
+        // console.log("sorting");
         var table, rows, switching, i, x, y, shouldSwitch;
         table = document.getElementById("myTableData");
-        console.log(table);
+        // console.log(table);
         switching = true;
         /*Make a loop that will continue until
       no switching has been done:*/
@@ -81,7 +121,7 @@
           //start by saying: no switching is done:
           switching = false;
           rows = table.rows;
-          console.log(rows);
+          // console.log(rows);
           /*Loop through all table rows (except the
         first, which contains table headers):*/
           for (i = 1; i < rows.length - 1; i++) {
@@ -108,37 +148,6 @@
         }
       }
     </script>
-    <div id="myDIV" class="header">
-      <h1>3 Pillar Global's Mini Project - Leader Board under DIY Program</h1>
 
-      <table id="myTable">
-        <tr>
-          <input type="text" id="fname" placeholder="first name" value="" />
-          <input type="text" id="lname" placeholder="last name" />
-          <input type="text" id="country" placeholder="country" />
-          <input type="text" id="score" placeholder="score" />
-          <input
-            type="submit"
-            id="add"
-            value="Add"
-            onclick="Javascript:addRow()"
-            style="background-color: #631ed5;"
-          />
-        </tr>
-      </table>
-    </div>
-    <center>
-      <div id="warn" class="text-danger" style="display: none">
-        **All fields are Mandatory**
-      </div>
-    </center>
-    <div>
-      <table id="myTableData" class="myTableData" cellpadding="1">
-        <tbody>
-          <tr>
-          </tr>
-        </tbody>
-      </table>
-    </div>
   </body>
 </html>
