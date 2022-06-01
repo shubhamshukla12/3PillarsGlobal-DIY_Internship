@@ -1,5 +1,5 @@
 // 1.
-// let firstName = 'Alex';
+let firstName = "Alex";
 let lastName = 'Finnch';
 let country = 'Canada';
 let age = '24';
