@@ -2,7 +2,7 @@
 * {
     box-sizing: border-box;
   }
-   input[type=text], input[type=submit]{
+   input[type=text], input[type=submit], input[type=number]{
     padding: 12px 20px;
     display: inline-block;
     border: 1px solid #ccc;
