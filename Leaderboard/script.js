@@ -20,13 +20,15 @@ function addRow() {
     var rowCount = table.rows.length;
     var row = table.insertRow(rowCount);
 
-    row.insertCell(0).innerHTML = myfName.value;
-    row.insertCell(1).innerHTML = mylname.value;
-    row.insertCell(2).innerHTML = myCountry.value;
-    row.insertCell(3).innerHTML = myScore.value;
-    row.insertCell(4).innerHTML =
+    var name = myfName.value + " " + mylname.value;
+    // row.insertCell(0).innerHTML = myfName.value;
+    // row.insertCell(1).innerHTML = mylname.value;
+    row.insertCell(0).innerHTML = name;
+    row.insertCell(1).innerHTML = myCountry.value;
+    row.insertCell(2).innerHTML = myScore.value;
+    row.insertCell(3).innerHTML =
       '<i class="fa fa-trash" onClick="Javacsript:deleteRow(this)" ></i>';
-    row.insertCell(5).innerHTML =
+    row.insertCell(4).innerHTML =
       "<button onClick='Javacsript:substractScore(this)' class='badge badge-info'>-5</button>";
     row.insertCell(5).innerHTML =
       "<button onClick='Javacsript:increaseScore(this)' class='badge badge-info;''>+5</button>";
@@ -38,12 +40,12 @@ function addRow() {
     document.getElementById("score").value="";
   }
   function substractScore(obj) {
-    var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[3];
+    var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[2];
     scoreTd.innerHTML = Number(scoreTd.innerHTML) - 5;
     sortTable();
   }
   function increaseScore(obj) {
-    var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[3];
+    var scoreTd = obj.parentNode.parentNode.getElementsByTagName("TD")[2];
     scoreTd.innerHTML = Number(scoreTd.innerHTML) + 5;
     sortTable();
   }
@@ -73,8 +75,8 @@ function addRow() {
         shouldSwitch = false;
         /*Get the two elements you want to compare,
       one from current row and one from the next:*/
-        x = rows[i].getElementsByTagName("TD")[3];
-        y = rows[i + 1].getElementsByTagName("TD")[3];
+        x = rows[i].getElementsByTagName("TD")[2];
+        y = rows[i + 1].getElementsByTagName("TD")[2];
         console.log(x, y);
         //check if the two rows should switch place:
         if (Number(x.innerHTML) < Number(y.innerHTML)) {
