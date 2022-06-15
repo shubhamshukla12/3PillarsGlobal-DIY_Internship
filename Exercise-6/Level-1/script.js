@@ -103,8 +103,8 @@ for(let i = 0 ; i <= 100 ; i++) {
 console.log("The sum of all evens from 0 to 100 is "+sumEven+" And the sum of all odds from 0 to 100 is "+sumOdd+".");
 
 // 12.
-let sumEven = 0;
-let sumOdd = 0
+// let sumEven = 0;
+// let sumOdd = 0
 for(let i = 0 ; i <= 100 ; i++) {
     if(i%2 == 0) sumEven = sumEven+i;
     else if(i%2 != 0) sumOdd = sumOdd+i;
