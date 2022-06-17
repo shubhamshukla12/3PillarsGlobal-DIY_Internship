@@ -1,0 +1,23 @@
+* {
+    box-sizing: border-box;
+}
+body{
+    background-color: #fbb4a8; 
+}
+h1{
+    color: #ae6ceb;;
+    text-align: center;
+    font-weight: bold;
+}
+h3, p {
+    text-align: center;
+    text-decoration: underline;
+}
+div{
+     display:flex;
+     flex-wrap: wrap;
+     width:1000px;
+     margin-left: 15rem;
+    justify-content: center;
+    
+}
