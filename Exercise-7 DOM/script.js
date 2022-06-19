@@ -29,6 +29,7 @@ let div = document.querySelector("div")
           block.style.color = "white";
           block.style.fontSize = '32px';
           block.style.fontWeight = 'bolder';
+          block.style.borderRadius = '12px';
           div.appendChild(block)
     }
     else if(i%2 == 0 && !isPrime(i)){
@@ -41,6 +42,7 @@ let div = document.querySelector("div")
           block.style.color = "white";
           block.style.fontSize = '32px';
           block.style.fontWeight = 'bolder';
+          block.style.borderRadius = '12px';
           div.appendChild(block)
     }
     // Odd numbers  
@@ -54,6 +56,7 @@ let div = document.querySelector("div")
         block.style.color = "white";
         block.style.fontSize = '32px';
         block.style.fontWeight = 'bolder';
+        block.style.borderRadius = '12px';
         div.appendChild(block)
     }
     else if(i%2 != 0 && !isPrime(i)){
@@ -66,6 +69,7 @@ let div = document.querySelector("div")
         block.style.color = "white";
         block.style.fontSize = '32px';
         block.style.fontWeight = 'bolder';
+        block.style.borderRadius = '12px';
         div.appendChild(block)
     }
     // cases for prime numbers only
@@ -79,6 +83,7 @@ let div = document.querySelector("div")
         block.style.color = "white";
         block.style.fontSize = '32px';
         block.style.fontWeight = 'bolder';
+        block.style.borderRadius = '12px';
         div.appendChild(block)
     }
 }
