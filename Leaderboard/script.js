@@ -77,7 +77,7 @@ function addRow() {
       one from current row and one from the next:*/
         x = rows[i].getElementsByTagName("TD")[2];
         y = rows[i + 1].getElementsByTagName("TD")[2];
-        console.log(x, y);
+      //  console.log(x, y);
         //check if the two rows should switch place:
         if (Number(x.innerHTML) < Number(y.innerHTML)) {
           //if so, mark as a switch and break the loop:
